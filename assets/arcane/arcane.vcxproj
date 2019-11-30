@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="core\entry.cc" />
+    <ClCompile Include="core\features\core\cfg.cc" />
+    <ClCompile Include="core\features\core\misc.cc" />
+    <ClCompile Include="core\features\core\visuals.cc" />
+    <ClCompile Include="core\hooks\hooked\create_move.cc" />
+    <ClCompile Include="core\hooks\hooked\emit_sound.cc" />
+    <ClCompile Include="core\hooks\hooked\frame_stage_notify.cc" />
+    <ClCompile Include="core\hooks\hooked\override_view.cc" />
+    <ClCompile Include="core\hooks\hooked\paint_traverse.cc" />
+    <ClCompile Include="core\hooks\hooked\scene_end.cc" />
+    <ClCompile Include="core\hooks\hooks.cc" />
+    <ClCompile Include="core\main\main.cc" />
+    <ClCompile Include="core\menu\menu.cc" />
+    <ClCompile Include="core\sdk\misc\input_helper.cc" />
+    <ClCompile Include="core\sdk\misc\netvar_tree.cc" />
+    <ClCompile Include="core\sdk\misc\render.cc" />
+    <ClCompile Include="deps\fgui\controls\button.cc" />
+    <ClCompile Include="deps\fgui\controls\checkbox.cc" />
+    <ClCompile Include="deps\fgui\controls\colorlist.cc" />
+    <ClCompile Include="deps\fgui\controls\colorpicker.cc" />
+    <ClCompile Include="deps\fgui\controls\combobox.cc" />
+    <ClCompile Include="deps\fgui\controls\container.cc" />
+    <ClCompile Include="deps\fgui\controls\element.cc" />
+    <ClCompile Include="deps\fgui\controls\keybinder.cc" />
+    <ClCompile Include="deps\fgui\controls\label.cc" />
+    <ClCompile Include="deps\fgui\controls\listbox.cc" />
+    <ClCompile Include="deps\fgui\controls\multibox.cc" />
+    <ClCompile Include="deps\fgui\controls\slider.cc" />
+    <ClCompile Include="deps\fgui\controls\spinner.cc" />
+    <ClCompile Include="deps\fgui\controls\tabs.cc" />
+    <ClCompile Include="deps\fgui\controls\textbox.cc" />
+    <ClCompile Include="deps\fgui\handler\handler.cc" />
+    <ClCompile Include="deps\fgui\notifications\notifications.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="core\features\core\cfg.hh" />
+    <ClInclude Include="core\features\core\misc.hh" />
+    <ClInclude Include="core\features\core\visuals.hh" />
+    <ClInclude Include="core\features\features.hh" />
+    <ClInclude Include="core\hooks\hooks.hh" />
+    <ClInclude Include="core\ifaces\ifaces.hh" />
+    <ClInclude Include="core\main\main.hh" />
+    <ClInclude Include="core\mem\mem.hh" />
+    <ClInclude Include="core\menu\menu.hh" />
+    <ClInclude Include="core\sdk\enums\analog_code.hh" />
+    <ClInclude Include="core\sdk\enums\button.hh" />
+    <ClInclude Include="core\sdk\enums\client_frame_stage.hh" />
+    <ClInclude Include="core\sdk\enums\flags.hh" />
+    <ClInclude Include="core\sdk\enums\font.hh" />
+    <ClInclude Include="core\sdk\enums\material.hh" />
+    <ClInclude Include="core\sdk\enums\move.hh" />
+    <ClInclude Include="core\sdk\enums\send_prop_type.hh" />
+    <ClInclude Include="core\sdk\ifaces\base_client.hh" />
+    <ClInclude Include="core\sdk\ifaces\client_class.hh" />
+    <ClInclude Include="core\sdk\ifaces\client_entity.hh" />
+    <ClInclude Include="core\sdk\ifaces\client_mode.hh" />
+    <ClInclude Include="core\sdk\ifaces\convar.hh" />
+    <ClInclude Include="core\sdk\ifaces\cvar.hh" />
+    <ClInclude Include="core\sdk\ifaces\debug_overlay.hh" />
+    <ClInclude Include="core\sdk\ifaces\engine.hh" />
+    <ClInclude Include="core\sdk\ifaces\entity.hh" />
+    <ClInclude Include="core\sdk\ifaces\global_vars.hh" />
+    <ClInclude Include="core\sdk\ifaces\input.hh" />
+    <ClInclude Include="core\sdk\ifaces\input_system.hh" />
+    <ClInclude Include="core\sdk\ifaces\material.hh" />
+    <ClInclude Include="core\sdk\ifaces\material_system.hh" />
+    <ClInclude Include="core\sdk\ifaces\panel.hh" />
+    <ClInclude Include="core\sdk\ifaces\player_info.hh" />
+    <ClInclude Include="core\sdk\ifaces\render_view.hh" />
+    <ClInclude Include="core\sdk\ifaces\sound.hh" />
+    <ClInclude Include="core\sdk\ifaces\sound_data.hh" />
+    <ClInclude Include="core\sdk\ifaces\surface.hh" />
+    <ClInclude Include="core\sdk\ifaces\user_cmd.hh" />
+    <ClInclude Include="core\sdk\ifaces\utl_vector.hh" />
+    <ClInclude Include="core\sdk\ifaces\view_setup.hh" />
+    <ClInclude Include="core\sdk\misc\capture_iface.hh" />
+    <ClInclude Include="core\sdk\misc\input_helper.hh" />
+    <ClInclude Include="core\sdk\misc\macros.hh" />
+    <ClInclude Include="core\sdk\misc\netvar_tree.hh" />
+    <ClInclude Include="core\sdk\misc\render.hh" />
+    <ClInclude Include="core\sdk\misc\vector.hh" />
+    <ClInclude Include="core\sdk\misc\vfunc_from_index.hh" />
+    <ClInclude Include="core\sdk\misc\vmt_hook.hh" />
+    <ClInclude Include="core\sdk\sdk.hh" />
+    <ClInclude Include="deps\fgui\controls\button.hh" />
+    <ClInclude Include="deps\fgui\controls\checkbox.hh" />
+    <ClInclude Include="deps\fgui\controls\colorlist.hh" />
+    <ClInclude Include="deps\fgui\controls\colorpicker.hh" />
+    <ClInclude Include="deps\fgui\controls\combobox.hh" />
+    <ClInclude Include="deps\fgui\controls\container.hh" />
+    <ClInclude Include="deps\fgui\controls\element.hh" />
+    <ClInclude Include="deps\fgui\controls\keybinder.hh" />
+    <ClInclude Include="deps\fgui\controls\label.hh" />
+    <ClInclude Include="deps\fgui\controls\listbox.hh" />
+    <ClInclude Include="deps\fgui\controls\multibox.hh" />
+    <ClInclude Include="deps\fgui\controls\slider.hh" />
+    <ClInclude Include="deps\fgui\controls\spinner.hh" />
+    <ClInclude Include="deps\fgui\controls\tabs.hh" />
+    <ClInclude Include="deps\fgui\controls\textbox.hh" />
+    <ClInclude Include="deps\fgui\deps\aliases.hh" />
+    <ClInclude Include="deps\fgui\deps\color.hh" />
+    <ClInclude Include="deps\fgui\deps\definitions.hh" />
+    <ClInclude Include="deps\fgui\deps\input.hh" />
+    <ClInclude Include="deps\fgui\deps\json.hh" />
+    <ClInclude Include="deps\fgui\FGUI.hh" />
+    <ClInclude Include="deps\fgui\handler\handler.hh" />
+    <ClInclude Include="deps\fgui\notifications\notifications.hh" />
+    <ClInclude Include="deps\fmt\chrono.hh" />
+    <ClInclude Include="deps\fmt\color.hh" />
+    <ClInclude Include="deps\fmt\compile.hh" />
+    <ClInclude Include="deps\fmt\core.hh" />
+    <ClInclude Include="deps\fmt\format-inl.hh" />
+    <ClInclude Include="deps\fmt\format.hh" />
+    <ClInclude Include="deps\fmt\locale.hh" />
+    <ClInclude Include="deps\fmt\ostream.hh" />
+    <ClInclude Include="deps\fmt\posix.hh" />
+    <ClInclude Include="deps\fmt\printf.hh" />
+    <ClInclude Include="deps\fmt\ranges.hh" />
+    <ClInclude Include="deps\fmt\safe-duration-cast.hh" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{5D915277-C28D-49B6-A860-488E3298D9DB}</ProjectGuid>
+    <RootNamespace>arcane</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>arcane</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)release\output\</OutDir>
+    <IntDir>$(SolutionDir)release\intermediate\</IntDir>
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)release\output\</OutDir>
+    <IntDir>$(SolutionDir)release\intermediate\</IntDir>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)debug\output\</OutDir>
+    <IntDir>$(SolutionDir)debug\intermediate\</IntDir>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)debug\output\</OutDir>
+    <IntDir>$(SolutionDir)debug\intermediate\</IntDir>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <SubSystem>NotSet</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <SubSystem>NotSet</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>NotSet</SubSystem>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>NotSet</SubSystem>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
